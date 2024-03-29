@@ -1,5 +1,4 @@
 import logo from "../../assets/kinepolis_logo.png";
-import "../../styles/index.css";
 
 export default function Loading() {
   return (
