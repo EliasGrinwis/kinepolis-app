@@ -1,0 +1,108 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@media screen and (max-width: 768px) {
+  .custom-container {
+    width: 100%;
+    padding-right: 10px !important;
+    padding-left: 10px !important;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .custom-container {
+    width: 100%;
+    padding-right: 10px !important;
+    padding-left: 10px !important;
+  }
+
+  .hide-small-screen {
+    display: none;
+  }
+}
+
+.custom-container {
+  max-width: 1440px;
+}
+
+* {
+  scroll-behavior: smooth;
+  --tw-ring-color: rgb(0 0 0 / 0) !important;
+}
+
+html,
+body {
+  scrollbar-color: #767e94 #121829;
+  scrollbar-width: thin;
+  scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+/* For WebKit browsers */
+::-webkit-scrollbar-track {
+  background: #121829;
+}
+
+/* Handle */
+/* For WebKit browsers */
+::-webkit-scrollbar-thumb {
+  background: #767e94;
+  border-radius: 5px; /* Adjust the value to change the border radius */
+}
+
+/* Handle on hover */
+/* For WebKit browsers */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+.big-shadow-bg {
+  background-color: transparent;
+  box-shadow: 0px 0px 100px 100px rgba(0, 0, 0, 0.8); /* Adjust the shadow size and color as needed */
+}
+
+.blurtest {
+  background: rgba(18, 24, 41, 0.8) !important;
+  -webkit-backdrop-filter: blur(24px);
+  backdrop-filter: blur(24px);
+}
+
+@keyframes fadeInOut {
+  0%,
+  100% {
+    opacity: 0.5;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+.skeleton {
+  background: linear-gradient(90deg, #f3f3f3 25%, #e5e5e5 50%, #f3f3f3 75%);
+  background-size: 468px 100%;
+  animation: fadeInOut 2s infinite;
+}
+
+.loaded {
+  transform: scale(1);
+  animation: pulse 0.9s infinite ease-in-out;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(0.95);
+  }
+
+  70% {
+    transform: scale(1);
+  }
+
+  100% {
+    transform: scale(0.95);
+  }
+}
