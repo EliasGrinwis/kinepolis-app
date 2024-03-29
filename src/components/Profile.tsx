@@ -38,7 +38,7 @@ export default function Profile() {
           <div className="">
             <div className="text-white text-4xl">{user?.name}</div>
             <div className="text-md text-gray-400 mt-1">
-              Lid geworden opp {formatDate(user?.updated_at)}
+              Lid geworden op {formatDate(user?.updated_at)}
             </div>
           </div>
         </div>
