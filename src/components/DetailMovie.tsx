@@ -1,6 +1,7 @@
 import {useLocation} from "react-router-dom";
 import ReactHlsPlayer from "@ducanh2912/react-hls-player";
 import {useEffect, useState} from "react";
+import MovieApi from "../apis/MovieApi";
 
 export default function DetailMovie() {
   const location = useLocation();
@@ -12,14 +13,14 @@ export default function DetailMovie() {
     window.scrollTo(0, 0);
   }, [location.state.movie]);
 
+  console.log(movie);
+
   useEffect(() => {
     if (movie.trailers && movie.trailers.length > 0) {
       // Check if the trailer URL is loaded
       setTrailerLoaded(true);
     }
   }, [movie.trailers]);
-
-  console.log(movie);
 
   function formatDate(inputDate: any) {
     const date = new Date(inputDate);
