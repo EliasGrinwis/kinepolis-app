@@ -1,7 +1,6 @@
 import {useLocation} from "react-router-dom";
 import ReactHlsPlayer from "@ducanh2912/react-hls-player";
 import {useEffect, useState} from "react";
-import MovieApi from "../apis/MovieApi";
 
 export default function DetailMovie() {
   const location = useLocation();
